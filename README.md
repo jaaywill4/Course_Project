@@ -1,7 +1,7 @@
 # Course_Project
 
 ## Vision
-THis project demonastrates a two-component containerized application using infrastructure as code principles.
+This project demonastrates a two-component containerized application using infrastructure as code principles.
 
 ### Architecture
 
@@ -9,7 +9,7 @@ THis project demonastrates a two-component containerized application using infra
 
 ### Components
 
-Component 1: Web APplication (Node.js)
+Component 1: Web ApPplication (Node.js)
 - Handles HTTP requests from useers.
 - Displays and increments visitor count.
 
