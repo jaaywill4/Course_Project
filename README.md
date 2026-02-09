@@ -23,7 +23,7 @@ Browser -> HTTP -> Web App
 Web App -> TCP (Redis protocol) -> Redis
 
 
-## PRoposal
+## Proposal
 
 This project will use lightweight container images for deployment.
 
