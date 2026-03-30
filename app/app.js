@@ -8,7 +8,7 @@ const client = redis.createClient({
 
 client.connect();
 
-app.get("/". async (req, res) => {
+app.get("/", async (req, res) => {
   let count = await client.get("visits");
   count = count ? parseInt(count) : 0;
   count++;
