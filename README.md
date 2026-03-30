@@ -5,7 +5,7 @@ This project demonastrates a two-component containerized application using Infra
 
 ### Architecture
 
-
+![Architecture Diagram](docs/architecture.png)
 
 ### Components
 
