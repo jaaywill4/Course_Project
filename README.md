@@ -1,7 +1,7 @@
 # Course_Project
 
 ## Vision
-This project demonastrates a two-component containerized application using Infrastructure as Code principles.
+This project demonstrates a two-component containerized application using Infrastructure as Code principles.
 
 ### Architecture
 
@@ -44,7 +44,7 @@ Here is what each line does:
     I chose this base image because it is a smaller version of Node.js, which makes the container lighter and faster to run.
 
 - WORKDIR /app
-    This sets the working directiory inside the container so all commands run in the app folder.
+    This sets the working directory inside the container so all commands run in the app folder.
 
 - COPY package*.json ./
     This copies the package files first so Docker can cache the dependencies and not reinstall them every time.
@@ -65,8 +65,8 @@ I used docker-compose to build and run both the web container and the Redis cont
 ## Networking
 
 The containers communicate using Docker's default bridge network.
-When I run docker-compose, Docker automatically puts both containers on the same netowork and assigns them IP addresses.
-Instead of using IP addresses directly, I used the name "redis" in my code to connect to the Redis container. Docker automatically translates this name to the correct IP aaddress.
+When I run docker-compose, Docker automatically puts both containers on the same network and assigns them IP addresses.
+Instead of using IP addresses directly, I used the name "redis" in my code to connect to the Redis container. Docker automatically translates this name to the correct IP address.
 This makes it easier because I don't have to worry about IPs changing.
 
 The communcation works like this:
