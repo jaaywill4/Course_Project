@@ -75,3 +75,50 @@ The communcation works like this:
 3. Redis updates the visitor count and sends it back.
 
 This setup allows the containers to talk to each other internally without exposing Redis to the outside.
+
+### System Overview
+
+This project implements a cloud-native two-tier application using Docker containers.
+The system consists of a Node.js wrb server and a Redis database that work together to maintain a visitor count.
+When a user accesses the application, the web server increments a counter stored in Redis and displays the updated value.
+
+### System Design
+
+The architecture follows a simplle client-server model:
+- Client sends HTTP request to the Node.js container
+- Node.js container communicates with Redis container
+- Redis stores the visitor count
+
+This separation of services demonstrates a real-world microservice pattern.
+
+### Deployment Process
+
+The system is deployed using Docker Compose.
+
+Steps:
+1. Build the Node.js container using the Dockerfile
+2. Pull the Redis image from Docker Hub
+3. Start both containers using:
+   docker compose up --build
+
+Docker Compose automatically creates a network and connects the services.
+
+### Key Features
+
+- Multi-container architecture
+- Custom Dockerfile for Node.js application
+- Redis integration for persistent counting
+- Container networking using service names
+- Graceful handling of Redis connection issues
+
+### Challenges and Solutions 
+
+**Challenge:** Redis may not be ready when the web server starts
+**Solution:** Used Docker Compose networking and service name resolution
+
+### Future Improvements
+
+- Add a fronted UI
+- Implement authentication
+- Deploy using CI/CD pipeline
+- Add container security features (non-root user, resource limits)
