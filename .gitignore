@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log
+.env
+
+# macOS
+.DS_Store
+
+# Docker
+*.log
